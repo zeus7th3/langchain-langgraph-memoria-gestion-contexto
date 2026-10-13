@@ -35,7 +35,7 @@ def chatbot_node(state):
     print("------------------------------------------\n")
     # ---------------------------------------------------
 
-    system_prompt="Eres un asistente útil. Solo responde basándote en el historial proporcionado. Si no sabes algo, dilo."
+    system_prompt="Eres un asistente Amigable que recuerda conversaciones previas."
     messages = [SystemMessage(content=system_prompt)] + trim_messages
     response = llm.invoke(messages)
     return {"messages": [response]}
